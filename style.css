@@ -1241,3 +1241,65 @@ backdrop-filter: blur(12px);
   box-shadow:
     0 16px 40px rgba(200,155,99,.28);
 }
+
+
+@media (max-width: 680px) {
+  section {
+    scroll-margin-top: 130px;
+  }
+
+  .navbar {
+    width: calc(100% - 24px);
+    padding: 16px 22px;
+  }
+
+  .brand span {
+    font-size: 26px;
+  }
+
+  .brand small {
+    font-size: 14px;
+  }
+
+  .reviews-section {
+    padding-top: 110px;
+  }
+
+  .reviews-button-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .reviews-more-btn,
+  .review-submit-btn {
+    width: min(100%, 360px);
+    min-width: unset;
+    height: 58px;
+    font-size: 16px;
+  }
+
+  .floating-socials {
+    right: 16px;
+    bottom: 90px !important;
+    gap: 12px;
+  }
+
+  .floating-socials a {
+    width: 58px;
+    height: 58px;
+    font-size: 14px;
+  }
+
+  .partners h2 {
+    font-size: 42px;
+    line-height: 1.05;
+  }
+}
+
+@media (max-width: 680px) {
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+}
