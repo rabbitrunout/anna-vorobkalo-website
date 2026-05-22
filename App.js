@@ -32,3 +32,9 @@ if (bookingWidget && bookingClose) {
     localStorage.setItem('bookingWidgetClosed', 'true');
   });
 }
+
+setTimeout(() => {
+  if (!localStorage.getItem('bookingWidgetClosed')) {
+    bookingWidget.classList.add('active');
+  }
+}, 18000);
