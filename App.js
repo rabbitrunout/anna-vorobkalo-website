@@ -16,3 +16,19 @@ if (reviewsBtn && moreReviews) {
   });
 
 }
+
+const bookingWidget = document.getElementById('bookingWidget');
+const bookingClose = document.getElementById('bookingClose');
+
+if (bookingWidget && bookingClose) {
+  setTimeout(() => {
+    if (!localStorage.getItem('bookingWidgetClosed')) {
+      bookingWidget.classList.add('active');
+    }
+  }, 6000);
+
+  bookingClose.addEventListener('click', () => {
+    bookingWidget.classList.remove('active');
+    localStorage.setItem('bookingWidgetClosed', 'true');
+  });
+}

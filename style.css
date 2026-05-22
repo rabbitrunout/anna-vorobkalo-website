@@ -1085,3 +1085,159 @@ backdrop-filter: blur(12px);
   font-size: 14px;
   opacity: .85;
 }
+
+.booking-widget {
+  position: fixed;
+  right: 26px;
+  bottom: 92px;
+  z-index: 50;
+
+  width: 330px;
+  padding: 20px;
+
+  display: flex;
+  gap: 14px;
+
+  background: rgba(245, 239, 231, .92);
+  border: 1px solid rgba(207,161,107,.35);
+  border-radius: 22px;
+
+  box-shadow: 0 24px 70px rgba(0,0,0,.24);
+
+  opacity: 0;
+  transform: translateY(24px) scale(.96);
+  pointer-events: none;
+
+  transition: .45s ease;
+}
+
+.booking-widget.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.booking-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(135deg, #e4bd8c, #bd8551);
+  color: #160f09;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.booking-content strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.booking-content p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.booking-content a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 42px;
+  padding: 0 16px;
+
+  border-radius: 999px;
+
+  background: #111;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.booking-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 22px;
+  color: var(--muted);
+
+  cursor: pointer;
+}
+
+@media (max-width: 620px) {
+  .booking-widget {
+    width: calc(100% - 32px);
+    right: 16px;
+    bottom: 86px;
+  }
+}
+
+.reviews-button-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.review-submit-btn {
+  background: #c89b63;
+  color: #fff;
+  border: none;
+}
+
+.review-submit-btn:hover {
+  background: #b88b55;
+  transform: translateY(-2px);
+}
+
+.reviews-more-btn,
+.review-submit-btn {
+  min-width: 220px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  font-weight: 600;
+  letter-spacing: .02em;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.review-submit-btn {
+  background: linear-gradient(135deg, #d5a56f, #bb8650);
+  color: white;
+
+  box-shadow:
+    0 10px 30px rgba(200,155,99,.18);
+}
+
+.review-submit-btn:hover {
+  background: linear-gradient(135deg, #ddb07d, #b87d45);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 40px rgba(200,155,99,.28);
+}
